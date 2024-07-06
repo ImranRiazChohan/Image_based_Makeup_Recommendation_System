@@ -188,10 +188,12 @@ import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from ultralytics import YOLO
 
 # Load the CSV files
 image_data = pd.read_csv('makeup_face_recommendation.csv')
 makeup_data = pd.read_csv('makeup_items\Makeup Items.csv')
+
 
 # Function to recommend images based on user input using cosine similarity
 def recommend_images(input_name, data, top_n=5):
